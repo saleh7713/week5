@@ -22,6 +22,17 @@ def sum_of_evens(min_value, max_value):
 
     # Function implementation here ...
 
+    total = 0  # Initialize total sum
+
+    # Iterate through all numbers between min_value and max_value (inclusive)
+    for number in range(min_value, max_value + 1):
+        # Check if the number is even
+        if number % 2 == 0:
+            total += number
+    
+    
+    return total
+
 # # # Run code example
 min_value = 10
 max_value = 13
