@@ -19,6 +19,22 @@ def calculate_average(numbers):
     
     # Function implementation here ...
 
+    if not numbers:  # Handle empty list case
+        return None
+
+    total_sum = 0
+    count = 0
+
+    # Iterate through the list to calculate sum and count
+    for num in numbers:
+        total_sum += num
+        count += 1
+
+    # Calculate average
+    average = total_sum / count
+
+    return average
+
 # # Example usage
 numbers = [10, 20, 30, 40, 50]
 print("The average is:", calculate_average(numbers))  # Expected output: The average is: 30.0
