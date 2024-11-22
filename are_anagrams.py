@@ -22,6 +22,15 @@ def are_anagrams(str1, str2):
 
     # Function implementation here ...
 
+    str1 = str1.lower()
+    str2 = str2.lower()
+
+    # Check if the sorted characters of both strings are equal
+    output = sorted(str1) == sorted(str2)
+
+
+    return output
+
 ## Example 
 print(are_anagrams("listen", "silent"))  # Expected output: True
 print(are_anagrams("hello", "world"))    # Expected output: False
