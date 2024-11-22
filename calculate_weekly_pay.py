@@ -15,6 +15,18 @@ def calculate_weekly_pay(hours_worked):
 
 
     # Function implementation here ...
+
+    if hours_worked <= standard_hours:
+        # No overtime, all hours paid at regular rate
+        total_pay = hours_worked * regular_rate
+    else:
+        # Regular pay for standard hours + overtime pay for extra hours
+        overtime_hours = hours_worked - standard_hours
+        total_pay = (standard_hours * regular_rate) + (overtime_hours * overtime_rate)
+
+
+
+    return total_pay
     
 # # Code Example
 overtime_pay = calculate_weekly_pay(36) # return 438 i.e, 438 in pounds per week.
